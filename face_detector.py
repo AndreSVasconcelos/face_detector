@@ -2,7 +2,7 @@
 import cv2 # OpenCV
 
 # Lendo imagem
-imagem = cv2.imread("./images/workplace.jpg")
+imagem = cv2.imread("./images/group.jpg")
 #cv2.imshow("Imagem", imagem)
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
@@ -18,8 +18,8 @@ detector = cv2.CascadeClassifier("./cascades/haarcascade_frontalface_default.xml
 
 # Detectar faces
 faces = detector.detectMultiScale(imagem_cinza, 
-                                  scaleFactor=1.1, 
-                                  #minNeighbors=5,
+                                  scaleFactor=1.6, 
+                                  minNeighbors=5,
                                   minSize=(30, 30))
 print(faces)
 
